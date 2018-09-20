@@ -441,6 +441,7 @@ GameObject:
   - component: {fileID: 586322334}
   - component: {fileID: 586322333}
   - component: {fileID: 586322332}
+  - component: {fileID: 586322336}
   m_Layer: 0
   m_Name: TargetPeg
   m_TagString: Untagged
@@ -469,7 +470,7 @@ MeshRenderer:
   m_GameObject: {fileID: 586322331}
   m_Enabled: 1
   m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_ReceiveShadows: 0
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -516,6 +517,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &586322336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 586322331}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b120db84f7db02342909d12468656efa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1234822584
 GameObject:
   m_ObjectHideFlags: 0
@@ -527,6 +539,7 @@ GameObject:
   - component: {fileID: 1234822587}
   - component: {fileID: 1234822586}
   - component: {fileID: 1234822585}
+  - component: {fileID: 1234822589}
   m_Layer: 0
   m_Name: GoalPeg
   m_TagString: Untagged
@@ -555,7 +568,7 @@ MeshRenderer:
   m_GameObject: {fileID: 1234822584}
   m_Enabled: 1
   m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_ReceiveShadows: 0
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -602,3 +615,14 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1234822589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1234822584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b120db84f7db02342909d12468656efa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
