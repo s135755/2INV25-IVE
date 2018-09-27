@@ -14,31 +14,32 @@ public class ExperimentControl : MonoBehaviour {
 	// Keep track of time and state
 	public double elapsedTime;
 	public State state;
-
-	// Use this for initialization
-	void Start () {
+ 
+    // Use this for initialization
+    void Start () {
 		elapsedTime = 0;
 		state = State.INTRO;
+        
 	}
-	
-	// Update is called once per frame
-	void Update () {
+    // Update is called once per frame
+    void Update()
+    {
 
-		// Increment time counter
-		elapsedTime += Time.deltaTime;
+        // Increment time counter
+        elapsedTime += Time.deltaTime;
 
-		// TODO: for each state, do stuff
-		switch(state)
-		{
-			case State.INTRO:
-				// Show dialog with experiment explanation maybe?
-				break;
-			case State.EXP:
-				// Construct a certain number of alignment tests and show them
-				break;
-			case State.FINISH:
-				// Remove everything from display, maybe display dialogue
-				break;
-		}
-	}
+        // TODO: for each state, do stuff
+        switch (state)
+        {
+            case State.INTRO:
+                // Show dialog with experiment explanation maybe?
+                break;
+            case State.EXP:
+                // Construct a certain number of alignment tests and show them
+                break;
+            case State.FINISH:
+                // Remove everything from display, maybe display dialogue
+                break;
+        }
+    }
 }
