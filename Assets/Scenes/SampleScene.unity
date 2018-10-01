@@ -331,6 +331,7 @@ GameObject:
   - component: {fileID: 495079866}
   - component: {fileID: 495079865}
   - component: {fileID: 495079864}
+  - component: {fileID: 495079868}
   m_Layer: 0
   m_Name: GoalPlane
   m_TagString: Untagged
@@ -407,6 +408,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &495079868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 495079863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c851b791ca7b96045848f243c845e579, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &534669902
 GameObject:
   m_ObjectHideFlags: 0
@@ -716,6 +728,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: faa373249bb640b4eb3a19739e03aae6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  plane: {fileID: 495079863}
 --- !u!1 &1343606923
 GameObject:
   m_ObjectHideFlags: 0
