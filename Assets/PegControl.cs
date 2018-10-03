@@ -4,10 +4,7 @@ using UnityEngine;
 
 public class PegControl : MonoBehaviour {
 
-    //X variable range from center
-    int xRange = 5;
-    //X variable range from center
-    int zRange = 5;
+    
 
     //Variables to store Target and Goal planes position
     Vector3 TargetPosition, GoalPosition;
@@ -19,6 +16,11 @@ public class PegControl : MonoBehaviour {
     // Gameobjects
     public GameObject goalPlane, targetPlane;
     public GameObject targetPeg, goalPeg;
+
+    //X variable range from center
+    int xRange = 5;
+    //X variable range from center
+    int zRange = 5;
 
     //Function to get a random position within the planes
     Vector3 getRandomPos(Vector3 position)

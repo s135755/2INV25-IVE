@@ -496,6 +496,50 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &578060050
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 578060052}
+  - component: {fileID: 578060051}
+  m_Layer: 0
+  m_Name: PegController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &578060051
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 578060050}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a67dfb4bc0edbb64db76525d965ef395, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  goalPlane: {fileID: 495079863}
+  targetPlane: {fileID: 358326774}
+  targetPeg: {fileID: 586322331}
+  goalPeg: {fileID: 1234822584}
+--- !u!4 &578060052
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 578060050}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.6229551, y: -1.8075469, z: 2.014783}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &586322331
 GameObject:
   m_ObjectHideFlags: 0
@@ -508,7 +552,6 @@ GameObject:
   - component: {fileID: 586322333}
   - component: {fileID: 586322332}
   - component: {fileID: 586322336}
-  - component: {fileID: 586322337}
   m_Layer: 0
   m_Name: TargetPeg
   m_TagString: Untagged
@@ -595,17 +638,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b120db84f7db02342909d12468656efa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &586322337
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 586322331}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 65ef9781a8371804ea1acc0e431e6f49, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1234822584
 GameObject:
   m_ObjectHideFlags: 0
@@ -618,8 +650,6 @@ GameObject:
   - component: {fileID: 1234822586}
   - component: {fileID: 1234822585}
   - component: {fileID: 1234822589}
-  - component: {fileID: 1234822590}
-  - component: {fileID: 1234822591}
   m_Layer: 0
   m_Name: GoalPeg
   m_TagString: Untagged
@@ -706,29 +736,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b120db84f7db02342909d12468656efa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1234822590
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1234822584}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d8ee7babfd9663d4a96063c0c22f72cc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1234822591
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1234822584}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: faa373249bb640b4eb3a19739e03aae6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  plane: {fileID: 495079863}
 --- !u!1 &1343606923
 GameObject:
   m_ObjectHideFlags: 0
