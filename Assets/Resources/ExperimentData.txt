@@ -1,0 +1,10 @@
+"ExperimentData": { "Experiment": 1, "XDistance": 0.01134193, "ZDistance": 0.02429891, "Time": 1.374638, "FOV": -2, "IOD": 36 }
+"ExperimentData": { "Experiment": 2, "XDistance": 0.2482708, "ZDistance": 0.6339867, "Time": 1.573761, "FOV": -1, "IOD": 38 }
+"ExperimentData": { "Experiment": 3, "XDistance": 0.4353702, "ZDistance": 0.7188526, "Time": 0.9610176, "FOV": 4, "IOD": 83 }
+"ExperimentData": { "Experiment": 4, "XDistance": 2.407102, "ZDistance": 0.9902221, "Time": 0.2977333, "FOV": -1, "IOD": 40 }
+"ExperimentData": { "Experiment": 5, "XDistance": 3.780007, "ZDistance": 0.05309665, "Time": 0.2986374, "FOV": 1, "IOD": 31 }
+"ExperimentData": { "Experiment": 6, "XDistance": 1.664129, "ZDistance": 1.130437, "Time": 0.2815895, "FOV": -3, "IOD": 170 }
+"ExperimentData": { "Experiment": 7, "XDistance": 4.13364, "ZDistance": 0.7208416, "Time": 0.5631905, "FOV": -5, "IOD": 69 }
+"ExperimentData": { "Experiment": 8, "XDistance": 1.752535, "ZDistance": 2.880594, "Time": 0.2978058, "FOV": -2, "IOD": 131 }
+"ExperimentData": { "Experiment": 9, "XDistance": 0.4038541, "ZDistance": 0.8648694, "Time": 0.2978401, "FOV": 3, "IOD": 78 }
+"ExperimentData": { "Experiment": 10, "XDistance": 0.2126074, "ZDistance": 2.236517, "Time": 0.7289276, "FOV": 1, "IOD": 123 }

@@ -123,6 +123,7 @@ GameObject:
   - component: {fileID: 85404454}
   - component: {fileID: 85404453}
   - component: {fileID: 85404455}
+  - component: {fileID: 85404456}
   m_Layer: 0
   m_Name: ExperimentController
   m_TagString: Untagged
@@ -166,6 +167,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 466a41c4279182149ba62ca36af1f35c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &85404456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 85404452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22d8792671e198847bf12629d60ca84a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &170076733
