@@ -12,6 +12,10 @@ public class ExperimentControl : MonoBehaviour {
     public static int TIMEBETWEENEXP = 4;
     public static int NUMEXP = 10;
     public static int NUMTEST = 3;
+    public static double MINFOV = 10;
+    public static double MAXFOV = 90;
+    public static double MINIOD = 0.1;
+    public static double MAXIOD = 8;
 
     //Experiment counter
     int elapsedTests;
@@ -21,7 +25,7 @@ public class ExperimentControl : MonoBehaviour {
     string path;
 
     //IOD and FOV values
-    float iod, fov;
+    double iod, fov;
 
     //BlackScreen text
     public Text bsText;
@@ -37,6 +41,11 @@ public class ExperimentControl : MonoBehaviour {
     public int elapsedExp;
     public float startTime;
 
+    //Fixed values for the experiments
+    public ArrayList fovValues;
+    public ArrayList iodValues;
+    
+
     // Use this for initialization
     void Start () {
         
@@ -49,6 +58,8 @@ public class ExperimentControl : MonoBehaviour {
         bsText = GameObject.Find("bsText").GetComponent<Text>();
         bsText.text = "This is Training Test " + (elapsedTests + 1);
         deleteDataFile();
+        fovValues = getEvenDistribution(MINFOV, MAXFOV, NUMEXP);
+        iodValues = getEvenDistribution(MINIOD, MAXIOD, NUMEXP);
     }
 
     // Update is called once per frame
@@ -93,7 +104,7 @@ public class ExperimentControl : MonoBehaviour {
     }
 
     // Finishes the test by storing all the given data
-    void finishTest(float startTime, float iod, float fov)
+    void finishTest(float startTime, double iod, double fov)
     {
         // Keep count of tests
         if (elapsedTests < NUMTEST)
@@ -123,9 +134,17 @@ public class ExperimentControl : MonoBehaviour {
     // Sets up and starts the next test
     void startTest()
     {
-        // TODO : Set different FOV and IOD values
-        fov = Random.Range(-5, 5);
-        iod = Random.Range(30, 180);
+        if (elapsedTests < NUMTEST) 
+        {
+            fov = Random.Range(10, 90);
+            iod = Random.Range(0, 7);
+        }
+        else
+        {
+            fov = (double)fovValues[elapsedExp];
+            iod = (double)iodValues[elapsedExp];
+        }
+
         
         // Put plegs in correct places
         PegControl.setPegsRandomly();
@@ -199,4 +218,43 @@ public class ExperimentControl : MonoBehaviour {
             System.IO.File.Delete(path+".meta");
         }
     }
+    /**
+	 * 
+	 * @param first first element of the set
+	 * @param last last element of the set
+	 * @param count number of sets
+	 * @return	a random but equally distribution of the numbers
+	 * @throws InterruptedException
+	 */
+     ArrayList getEvenDistribution(double first, double last, int count) 
+    {
+        ArrayList nums = new ArrayList();
+		double rate = (last - first) / count;
+    double element = first;
+		for(int i = 0; i<count; i++){
+			nums.Add(element);
+			element += rate;
+		}
+		return nums;
+	}
+	/**
+	 * 
+	 * @param nums numbers equally distributed
+	 * @return numbers order altered
+	 */
+	public static ArrayList getRandomOrder(ArrayList nums)
+{
+    ArrayList newList = new ArrayList();
+        System.Random ran = new System.Random();
+        int power = ran.Next(0, 10);
+        while (newList.Count < nums.Count)
+    {
+        int i = ran.Next(0, nums.Count); ;
+        if (!newList.Contains(nums[i]))
+            newList.Add(nums[i]);
+    }
+
+
+    return newList;
+}
 }
